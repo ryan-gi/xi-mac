@@ -117,7 +117,7 @@ public struct FpsSnapshot {
     }
 }
 
-public protocol FpsObserver : class {
+public protocol FpsObserver : AnyObject {
     func changed(fps: Double)
     func changed(fpsStats: FpsSnapshot)
 }

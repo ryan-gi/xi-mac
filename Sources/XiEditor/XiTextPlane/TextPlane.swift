@@ -75,7 +75,7 @@ class TextPlaneDemo: NSView, TextPlaneDelegate {
 
 }
 
-protocol TextPlaneDelegate: class {
+protocol TextPlaneDelegate: AnyObject {
     func render(_ renderer: Renderer, dirtyRect: NSRect)
 }
 

@@ -21,7 +21,7 @@ enum SelectionModifier: String {
     case addRemovingCurrent = "add_removing_current"
 }
 
-protocol XiViewProxy: class {
+protocol XiViewProxy: AnyObject {
     func resize(size: CGSize)
 
     func paste(characters: String)

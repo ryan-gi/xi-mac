@@ -15,7 +15,7 @@
 import Cocoa
 
 /// The EditViewDataSource protocol describes the properties that an editView uses to determine how to render its contents.
-protocol EditViewDataSource: class {
+protocol EditViewDataSource: AnyObject {
     var lines: LineCache<LineAssoc> { get }
     var styleMap: StyleMap { get }
     var theme: Theme { get }
@@ -60,7 +60,7 @@ struct FindQuery {
     }
 }
 
-protocol FindDelegate: class {
+protocol FindDelegate: AnyObject {
     func find(_ queries: [FindQuery])
     func findNext(wrapAround: Bool, allowSame: Bool)
     func findPrevious(wrapAround: Bool)
@@ -73,7 +73,7 @@ protocol FindDelegate: class {
     func updateScrollPosition(previousOffset: CGFloat)
 }
 
-protocol MarkerDelegate: class {
+protocol MarkerDelegate: AnyObject {
     func setMarker(_ items: [Marker])
 }
 

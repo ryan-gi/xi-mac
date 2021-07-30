@@ -14,7 +14,7 @@
 
 import Cocoa
 
-protocol ScrollInterested: class {
+protocol ScrollInterested: AnyObject {
     func willScroll(to newOrigin: NSPoint)
 }
 
